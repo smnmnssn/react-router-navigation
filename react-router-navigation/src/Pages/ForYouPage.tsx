@@ -9,7 +9,7 @@ export default function ForYouPage() {
         <h2 className="text-2xl mb-2">Popular Artists</h2>
         <div className="flex gap-2">
           {mockedArtists.map((artist) => (
-            <ArtistCard title={artist.name} imageURL={artist.imageUrl} />
+            <ArtistCard artist={artist} />
           ))}
         </div>
       </section>

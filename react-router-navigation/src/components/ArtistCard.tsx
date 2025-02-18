@@ -1,18 +1,18 @@
 import { Link } from "react-router";
+import { Artist } from "../data";
 
 interface Props {
-    title:string;
-    imageURL:string;
+    artist: Artist;
 }
 
 export default function ArtistCard(props: Props) {
     return (
-        <Link to="artist" className="p-2 hover:bg-slate-800 rounded-md">
+        <Link to={`artists/${props.artist.slug}/${props.artist.id}`} className="p-2 hover:bg-slate-800 rounded-md">
         <img
           className="rounded-full"
-          src={props.imageURL}
+          src={props.artist.imageUrl}
         />
-        <h3>{props.title}</h3>
+        <h3>{props.artist.name}</h3>
         <span className="text-sm text-slate-300">Artist</span>
       </Link>
     )
