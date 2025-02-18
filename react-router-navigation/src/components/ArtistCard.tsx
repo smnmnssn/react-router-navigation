@@ -7,7 +7,7 @@ interface Props {
 
 export default function ArtistCard(props: Props) {
     return (
-        <Link to="artist" className="p-2 hover:bg-slate-800">
+        <Link to="artist" className="p-2 hover:bg-slate-800 rounded-md">
         <img
           className="rounded-full"
           src={props.imageURL}
